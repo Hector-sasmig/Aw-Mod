@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica obligatoria segunda convocatoria - Pokédex</title>
+  <meta name="description" content="Práctica obligatoria segunda convocatoria AW">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/pico.min.css">
+  <link rel="stylesheet" href="assets/css/types.min.css">
+  <!-- JS -->
+  <script src="assets/js/pokedex.mjs" type="module" defer></script>
+</head>
+<body>
+  <!-- Cabecera -->
+  <header class="container-fluid">
+    <nav>
+      <!-- Título del sitio web -->
+      <ul>
+        <li>
+          <hgroup>
+            <h1>Pokédex</h1>
+            <p>Gestor de Pokémon</p>
+          </hgroup>
+        </li>
+      </ul>
+      <!-- Botón de cerrar sesión -->
+      <ul>
+        <li><button id="user-logout" class="contrast">Cerrar sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Contenido principal -->
+  <main class="container">
+    <!-- Operaciones -->
+    <section>
+      <h2>Operaciones</h2>
+      <article class="pokeball-border">
+        <details>
+          <summary role="button" class="outline contrast">Crear nuevo Pokémon</summary>
+          <form name="dex-create">
+            <fieldset>
+              <caption><strong>Datos básicos</strong></caption>
+              <input type="text" name="name" placeholder="Nombre" required>
+              <input type="text" name="species" placeholder="Especie" required>
+              <input type="text" name="type" placeholder="Tipo (separado por espacios en blanco)" required>
+            </fieldset>
+            <fieldset name="images">
+              <caption><strong>Imágenes</strong></caption>
+              <input type="url" name="sprite" placeholder="URL para imagen pequeña">
+              <input type="url" name="hires" placeholder="URL para imagen grande">
+            </fieldset>
+            <div class="grid">
+              <button class="contrast">Crear</button>
+            </div>
+          </form>
+        </details>
+      </article>
+    </section>
+    <section>
+      <h2>Búsqueda</h2>
+      <!-- Formulario de búsqueda -->
+      <form name="dex-search" role="search">
+        <input type="search" name="name" placeholder="Introduzca el nombre del Pokémon">
+        <input type="submit" value="Buscar">
+      </form>
+      <!-- Resultados de la búsqueda -->
+      <article id="dex-results" class="overflow-auto pokeball-border"></article>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer class="container-fluid">
+    <hr>
+    <p>&copy; 2024. Aplicaciones Web. <em>Grado en Ingeniería Informática (Universidad de León)</em>.</p>
+  </footer>
+</body>
+</html>

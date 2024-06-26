@@ -1,0 +1,28 @@
+{
+  "name": "aw-laboratorio-10",
+  "version": "1.0.0",
+  "description": "AW - Laboratorio 10: Node, Cookies y Token JWT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config src/app.js",
+    "dev": "nodemon -r dotenv/config --watch src src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
